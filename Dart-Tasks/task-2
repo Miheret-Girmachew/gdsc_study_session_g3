@@ -1,0 +1,47 @@
+void main() {
+  var numbers = [1, 8, 3, 3, 4, 45, 5, 69, 10, 39, 91, 10];
+
+  print('Maximum Number: ${findMaximum(numbers)}');
+  print('Minimum Number: ${findMinimum(numbers)}');
+  print('Sum of Numbers: ${calculateSum(numbers)}');
+  print('Average of Numbers: ${calculateAverage(numbers)}');
+}
+
+int findMaximum(List<int> numbers) {
+  int maximum = numbers[0];
+  for (var num in numbers) {
+    if (num > maximum) {
+      maximum = num;
+    }
+  }
+  return maximum;
+}
+
+
+int findMinimum(List<int> numbers) {
+  int minimum = numbers[0];
+  for (var num in numbers) {
+    if (num < minimum) {
+      minimum = num;
+    }
+  }
+  return minimum;
+}
+
+
+int calculateSum(List<int> numbers) {
+  int summ = 0;
+  for (var num in numbers) {
+    summ += num;
+  }
+  return summ;
+} 
+
+
+double calculateAverage(List<int> numbers) {
+  double summ = 0;
+  for(var num in numbers){
+      summ+= num;
+  }
+    return summ / numbers.length;
+}
